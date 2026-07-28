@@ -1,0 +1,119 @@
+{
+	"format_version": "1.9.0",
+	"textures": {
+		"0": "mcsatisfactory:item/xeno_zapper"
+	},
+	"elements": [
+		{
+			"name": "battery thingy",
+			"from": [6.5, 0, 6.5],
+			"to": [10.5, 3, 9.5],
+			"faces": {
+				"north": {"uv": [0, 0, 4, 3], "texture": "#0"},
+				"east": {"uv": [4, 3, 7, 6], "texture": "#0"},
+				"south": {"uv": [4, 0, 0, 3], "texture": "#0"},
+				"west": {"uv": [4, 0, 7, 3], "texture": "#0"},
+				"up": {"uv": [4, 3, 0, 6], "texture": "#0"},
+				"down": {"uv": [0, 6, 4, 9], "texture": "#0"}
+			}
+		},
+		{
+			"name": "handle",
+			"from": [7, 3, 7],
+			"to": [9, 7, 9],
+			"faces": {
+				"north": {"uv": [12, 12, 14, 16], "texture": "#0"},
+				"east": {"uv": [10, 12, 12, 16], "texture": "#0"},
+				"south": {"uv": [14, 12, 12, 16], "texture": "#0"},
+				"west": {"uv": [14, 12, 16, 16], "texture": "#0"},
+				"up": {"uv": [14, 12, 16, 14], "texture": "#0"},
+				"down": {"uv": [14, 14, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"name": "connector?",
+			"from": [7, 10, 7],
+			"to": [9, 11, 9],
+			"faces": {
+				"north": {"uv": [8, 9, 10, 10], "texture": "#0"},
+				"east": {"uv": [8, 9, 10, 10], "texture": "#0"},
+				"south": {"uv": [8, 9, 10, 10], "texture": "#0"},
+				"west": {"uv": [8, 9, 10, 10], "texture": "#0"},
+				"up": {"uv": [8, 9, 10, 11], "texture": "#0"},
+				"down": {"uv": [8, 9, 10, 11], "texture": "#0"}
+			}
+		},
+		{
+			"name": "other handle thing",
+			"from": [6.5, 7, 6.5],
+			"to": [9.5, 10, 9.5],
+			"faces": {
+				"north": {"uv": [10, 9, 13, 12], "texture": "#0"},
+				"east": {"uv": [13, 9, 16, 12], "texture": "#0"},
+				"south": {"uv": [10, 9, 13, 12], "texture": "#0"},
+				"west": {"uv": [13, 9, 16, 12], "texture": "#0"},
+				"up": {"uv": [7, 10, 10, 13], "texture": "#0"},
+				"down": {"uv": [7, 13, 10, 16], "texture": "#0"}
+			}
+		},
+		{
+			"name": "top part",
+			"from": [6.5, 11, 6.5],
+			"to": [9.5, 13, 9.5],
+			"faces": {
+				"north": {"uv": [3, 14, 6, 16], "texture": "#0"},
+				"east": {"uv": [0, 12, 3, 14], "texture": "#0"},
+				"south": {"uv": [6, 14, 3, 16], "texture": "#0"},
+				"west": {"uv": [0, 14, 3, 16], "texture": "#0"},
+				"up": {"uv": [3, 11, 6, 14], "texture": "#0"},
+				"down": {"uv": [0, 9, 3, 12], "texture": "#0"}
+			}
+		},
+		{
+			"name": "zappy things",
+			"from": [8.5, 12, 4.5],
+			"to": [8.5, 16, 11.5],
+			"faces": {
+				"north": {"uv": [16, 0, 16, 4], "texture": "#0"},
+				"east": {"uv": [9, 0, 16, 4], "texture": "#0"},
+				"south": {"uv": [16, 0, 16, 4], "texture": "#0"},
+				"west": {"uv": [9, 0, 16, 4], "texture": "#0"},
+				"up": {"uv": [16, 0, 16, 7], "texture": "#0"},
+				"down": {"uv": [16, 0, 16, 7], "texture": "#0"}
+			}
+		}
+	],
+	"gui_light": "front",
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, -90, 0],
+			"translation": [0, 0.75, 0],
+			"scale": [0.8, 0.8, 0.8]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 90, 0],
+			"translation": [0, 1, 0],
+			"scale": [0.8, 0.8, 0.8]
+		},
+		"firstperson_righthand": {
+			"rotation": [85, -80, 90],
+			"translation": [0.75, 1.5, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-95, 80, 90],
+			"translation": [0.75, 1.5, 0]
+		},
+		"ground": {
+			"translation": [0, 2.25, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"gui": {
+			"rotation": [-55, 65, 50],
+			"scale": [0.9, 0.9, 0.9]
+		},
+		"fixed": {
+			"rotation": [0, -90, 0],
+			"translation": [0, 0, -0.01]
+		}
+	}
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "mcsatisfactory",
+  "version": "${version}",
+  "name": "MC Satisfactory",
+  "description": "A mod that aims to add the entirety of Satisfactory to Minecraft.",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/mcsatisfactory/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "net.kittykat.mcsatisfactory.datagen.MCSatisfactoryDataGenerator"
+    ],
+    "client": [
+      "net.kittykat.mcsatisfactory.MCSatisfactoryClient"
+    ],
+    "main": [
+      "net.kittykat.mcsatisfactory.MCSatisfactory"
+    ],
+    "cardinal-components": [
+      "net.kittykat.mcsatisfactory.ModEntityComponents"
+    ]
+  },
+  "mixins": [
+    "mcsatisfactory.mixins.json",
+    {
+      "config": "mcsatisfactory.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  },
+  "custom": {
+    "cardinal-components": [
+      "mcsatisfactory:jetpack_data",
+      "mcsatisfactory:preferred_ammo"
+    ]
+  }
+}
