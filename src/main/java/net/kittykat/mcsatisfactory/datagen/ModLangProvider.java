@@ -34,7 +34,7 @@ public class ModLangProvider extends FabricLanguageProvider {
         addKey(OPEN_BUILD_MENU, "Open Build Menu");
         addKey(RELOAD,          "Reload Weapon");
 
-        addTooltip("change_fuel", "§7r-click to change fuel");
+        addTooltip("change_fuel", "§8Press [§7R-Click§8] to change fuel");
 
         addSubtitle(RESOURCE_SCAN_HIT, "Resource Scan hits");
         addSubtitle(SLOT_BACK_EQUIP,   "Equipment Rattles");
