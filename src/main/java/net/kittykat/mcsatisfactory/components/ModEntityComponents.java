@@ -1,11 +1,8 @@
-package net.kittykat.mcsatisfactory;
+package net.kittykat.mcsatisfactory.components;
 
 import dev.onyxstudios.cca.api.v3.entity.EntityComponentFactoryRegistry;
 import dev.onyxstudios.cca.api.v3.entity.EntityComponentInitializer;
 import dev.onyxstudios.cca.api.v3.entity.RespawnCopyStrategy;
-import net.kittykat.mcsatisfactory.components.ModComponents;
-import net.kittykat.mcsatisfactory.components.JetpackDataComponent;
-import net.kittykat.mcsatisfactory.components.PreferredAmmoComponent;
 import org.jetbrains.annotations.NotNull;
 
 import static net.kittykat.mcsatisfactory.components.ModComponents.*;

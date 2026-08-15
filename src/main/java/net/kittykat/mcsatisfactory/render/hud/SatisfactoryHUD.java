@@ -1,4 +1,4 @@
-package net.kittykat.mcsatisfactory.render;
+package net.kittykat.mcsatisfactory.render.hud;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

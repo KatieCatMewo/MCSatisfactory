@@ -2,10 +2,8 @@ package net.kittykat.mcsatisfactory.render;
 
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.fabricmc.fabric.api.client.rendering.v1.WorldRenderEvents;
+import net.kittykat.mcsatisfactory.render.hud.SatisfactoryHUD;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.VertexFormat;
-import net.minecraft.client.render.VertexFormats;
 
 import static net.kittykat.mcsatisfactory.MCSatisfactory.LOGGER;
 import static net.kittykat.mcsatisfactory.MCSatisfactory.MOD_ID;

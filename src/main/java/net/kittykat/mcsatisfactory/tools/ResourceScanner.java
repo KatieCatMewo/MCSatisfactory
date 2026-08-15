@@ -1,5 +1,6 @@
-package net.kittykat.mcsatisfactory.controls;
+package net.kittykat.mcsatisfactory.tools;
 
+import net.kittykat.mcsatisfactory.controls.KeyHandler;
 import net.kittykat.mcsatisfactory.networking.ModNetworking;
 import net.kittykat.mcsatisfactory.networking.ResourceScanC2SPacket;
 import net.kittykat.mcsatisfactory.render.ScannerPulseRenderer;
@@ -12,7 +13,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;

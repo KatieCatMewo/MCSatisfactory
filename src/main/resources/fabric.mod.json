@@ -3,7 +3,7 @@
   "id": "mcsatisfactory",
   "version": "${version}",
   "name": "MC Satisfactory",
-  "description": "A mod that aims to add the entirety of Satisfactory to Minecraft.",
+  "description": "a mod that aims to add the entirety of Satisfactory to Minecraft",
   "authors": [],
   "contact": {},
   "license": "MIT",
@@ -20,7 +20,7 @@
       "net.kittykat.mcsatisfactory.MCSatisfactory"
     ],
     "cardinal-components": [
-      "net.kittykat.mcsatisfactory.ModEntityComponents"
+      "net.kittykat.mcsatisfactory.components.ModEntityComponents"
     ]
   },
   "mixins": [

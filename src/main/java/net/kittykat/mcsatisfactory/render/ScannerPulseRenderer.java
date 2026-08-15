@@ -1,7 +1,7 @@
 package net.kittykat.mcsatisfactory.render;
 
 import net.fabricmc.fabric.api.client.rendering.v1.WorldRenderContext;
-import net.kittykat.mcsatisfactory.controls.ResourceScanner;
+import net.kittykat.mcsatisfactory.tools.ResourceScanner;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.VertexConsumer;
