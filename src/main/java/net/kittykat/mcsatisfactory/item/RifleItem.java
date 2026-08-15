@@ -4,12 +4,24 @@ import net.kittykat.mcsatisfactory.components.ModComponents;
 import net.minecraft.entity.player.PlayerEntity;
 
 public class RifleItem extends RangedWeaponItem {
+    private static final int BLOOM_SCALE     = 3;
+    private static final int MAX_BLOOM_STEPS = 15;
+    private static final int MAX_BLOOM       = BLOOM_SCALE * MAX_BLOOM_STEPS;
+
     public RifleItem(Settings settings) {
         super(settings);
     }
 
     @Override
     public int getCrosshairIndex(PlayerEntity player) {
-        return 4 + ModComponents.PREFERRED_AMMO.get(player).rifleAmmo;
+        return ModComponents.PREFERRED_AMMO.get(player).rifleAmmo;
+    }
+    public int getCrosshairBloom(int i) {
+        return switch (i) {
+            case 0  -> 0;  // normal
+            case 1  -> 0;  // turbo
+            case 2  -> MAX_BLOOM;  // homing
+            default -> 0;
+        };
     }
 }
