@@ -1,6 +1,6 @@
 package net.kittykat.mcsatisfactory.item;
 
-import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 
 public class NobeliskDetonatorItem extends RangedWeaponItem {
     public NobeliskDetonatorItem(Settings settings) {
@@ -8,7 +8,7 @@ public class NobeliskDetonatorItem extends RangedWeaponItem {
     }
 
     @Override
-    public int getCrosshairIndex(PlayerEntity player) {
+    public int getCrosshairIndex(ItemStack stack) {
         return 2;
     }
 }

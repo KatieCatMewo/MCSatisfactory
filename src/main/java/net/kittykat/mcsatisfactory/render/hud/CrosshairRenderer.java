@@ -10,6 +10,7 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.NotNull;
 
@@ -36,7 +37,8 @@ public abstract class CrosshairRenderer {
     public static void renderCrosshair(DrawContext context) {
         PlayerEntity player = MinecraftClient.getInstance().player;
         if (player != null) {
-            Item heldItem = player.getInventory().getMainHandStack().getItem();
+            ItemStack heldStack = player.getInventory().getMainHandStack();
+            Item heldItem = heldStack.getItem();
 
             int scaledWidth  = context.getScaledWindowWidth();
             int scaledHeight = context.getScaledWindowHeight();
@@ -44,7 +46,7 @@ public abstract class CrosshairRenderer {
             int y = (scaledHeight - SIZE) / 2;
 
             if (heldItem instanceof RangedWeaponItem weapon) {
-                int c = weapon.getCrosshairIndex(player);
+                int c = weapon.getCrosshairIndex(heldStack);
                 int u = TEX_TILE_SIZE * c;
 
                 if (weapon instanceof NobeliskDetonatorItem) {

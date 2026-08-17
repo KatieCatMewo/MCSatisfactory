@@ -1,5 +1,6 @@
 package net.kittykat.mcsatisfactory.item;
 
+import net.kittykat.mcsatisfactory.components.entity.PreferredFuelComponent;
 import net.kittykat.mcsatisfactory.sound.ModSounds;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.item.TooltipContext;
@@ -18,7 +19,7 @@ import net.minecraft.util.Rarity;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.kittykat.mcsatisfactory.components.ModComponents;
-import net.kittykat.mcsatisfactory.components.JetpackDataComponent;
+import net.kittykat.mcsatisfactory.components.item.JetpackDataComponent;
 import net.kittykat.mcsatisfactory.networking.JetpackActiveStateC2SPacket;
 import net.kittykat.mcsatisfactory.networking.JetpackBoostC2SPacket;
 import net.kittykat.mcsatisfactory.networking.JetpackFuelChangeC2SPacket;
@@ -52,8 +53,8 @@ public class JetpackItem extends ArmorItem {
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         PlayerEntity player = MinecraftClient.getInstance().player;
         if (player != null) {
-            JetpackDataComponent data = ModComponents.JETPACK_DATA.get(player);
-            tooltip.add(Text.literal("-> ").append(Text.translatable(data.getPreferredFuel().getTranslationKey())));
+            PreferredFuelComponent data = ModComponents.PREFERRED_FUEL.get(player);
+            tooltip.add(Text.literal("-> ").append(Text.translatable(data.getPreferredFuelItem().getTranslationKey())));
             tooltip.add(Text.translatable(TOOLTIP_KEY));
         }
         super.appendTooltip(stack, world, tooltip, context);
@@ -75,20 +76,21 @@ public class JetpackItem extends ArmorItem {
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (entity instanceof PlayerEntity player) {
-            JetpackDataComponent data = ModComponents.JETPACK_DATA.get(player);
+            JetpackDataComponent itemData   = ModComponents.JETPACK_DATA.get(stack);
+            PreferredFuelComponent fuelData = ModComponents.PREFERRED_FUEL.get(player);
 
             if (player.getEquippedStack(EquipmentSlot.CHEST) == stack) {
                 boolean validPlayerState = isValidPlayerState(player);
                 boolean grounded = isPlayerGrounded(player);
                 if (world.isClient) { // Client
-                    boolean lastActive = data.isActive;
-                    data.isActive = false;
+                    boolean lastActive = itemData.isActive;
+                    itemData.isActive = false;
 
-                    if (validPlayerState && !grounded) {  // ToDo: && (data.remainingFuel > 0)
-                        data.isActive = ((ClientPlayerEntity) player).input.jumping;
-                        if (data.isActive) {
+                    if (validPlayerState && !grounded) {  // ToDo: && (itemData.remainingFuel > 0)
+                        itemData.isActive = ((ClientPlayerEntity) player).input.jumping;
+                        if (itemData.isActive) {
                             double velocityY = player.getVelocity().getY();
-                            double targetVelocity = data.getTargetVelocity();
+                            double targetVelocity = fuelData.getTargetVelocity();
                             double velDifference = targetVelocity - velocityY;
                             boolean removeFuel = (velDifference > 0d);
                             if (removeFuel) {
@@ -103,9 +105,9 @@ public class JetpackItem extends ArmorItem {
                             ModNetworking.sendFromClient(ModNetworking.JETPACK_BOOST_PACKET, packet);
                         }
                     }
-                    if (!lastActive && data.isActive) {
+                    if (!lastActive && itemData.isActive) {
                         changeActiveState(true);
-                    } else if (lastActive && !data.isActive) {
+                    } else if (lastActive && !itemData.isActive) {
                         changeActiveState(false);
                     }
                 } else { // Server
@@ -113,12 +115,12 @@ public class JetpackItem extends ArmorItem {
                         // TODO: refuel jetpack
                     }
 
-                    if (data.queueActivate) {
+                    if (itemData.queueActivate) {
                         // TODO: play activate sound, start sound loop
-                        data.queueActivate = false;
-                    } else if (data.queueDeactivate) {
+                        itemData.queueActivate = false;
+                    } else if (itemData.queueDeactivate) {
                         // TODO: play deactivate sound, cancel sound loop
-                        data.queueDeactivate = false;
+                        itemData.queueDeactivate = false;
                     }
                 }
             }
@@ -144,7 +146,7 @@ public class JetpackItem extends ArmorItem {
             ItemStack stack = inventory.main.get(s);
             if (!stack.isEmpty()) {
                 Item item = stack.getItem();
-                if ((fuelItem == null) && JetpackDataComponent.isFuel(item)) {
+                if ((fuelItem == null) && PreferredFuelComponent.isFuel(item)) {
                     fuelItem = item;
                 } else if (preferredFuel.equals(item)) {
                     count = 0;

@@ -1,7 +1,7 @@
 package net.kittykat.mcsatisfactory.item;
 
 import net.kittykat.mcsatisfactory.components.ModComponents;
-import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 
 public class RebarGunItem extends RangedWeaponItem {
     public RebarGunItem(Settings settings) {
@@ -9,7 +9,7 @@ public class RebarGunItem extends RangedWeaponItem {
     }
 
     @Override
-    public int getCrosshairIndex(PlayerEntity player) {
-        return ModComponents.PREFERRED_AMMO.get(player).rebarAmmo;
+    public int getCrosshairIndex(ItemStack stack) {
+        return ModComponents.REBAR_GUN_DATA.get(stack).getAmmoType();
     }
 }

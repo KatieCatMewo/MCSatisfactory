@@ -20,7 +20,8 @@
       "net.kittykat.mcsatisfactory.MCSatisfactory"
     ],
     "cardinal-components": [
-      "net.kittykat.mcsatisfactory.components.ModEntityComponents"
+      "net.kittykat.mcsatisfactory.components.entity.ModEntityComponents",
+      "net.kittykat.mcsatisfactory.components.item.ModItemComponents"
     ]
   },
   "mixins": [
@@ -37,8 +38,10 @@
   },
   "custom": {
     "cardinal-components": [
+      "mcsatisfactory:preferred_fuel",
       "mcsatisfactory:jetpack_data",
-      "mcsatisfactory:preferred_ammo"
+      "mcsatisfactory:rebar_gun_data",
+      "mcsatisfactory:rifle_data"
     ]
   }
 }

@@ -1,7 +1,7 @@
 package net.kittykat.mcsatisfactory.item;
 
 import net.kittykat.mcsatisfactory.components.ModComponents;
-import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 
 public class RifleItem extends RangedWeaponItem {
     private static final int BLOOM_SCALE     = 3;
@@ -13,8 +13,8 @@ public class RifleItem extends RangedWeaponItem {
     }
 
     @Override
-    public int getCrosshairIndex(PlayerEntity player) {
-        return ModComponents.PREFERRED_AMMO.get(player).rifleAmmo;
+    public int getCrosshairIndex(ItemStack stack) {
+        return ModComponents.RIFLE_DATA.get(stack).getAmmoType();
     }
     public int getCrosshairBloom(int i) {
         return switch (i) {
