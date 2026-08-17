@@ -1,6 +1,8 @@
 package net.kittykat.mcsatisfactory.networking.jetpack;
 
 import net.fabricmc.fabric.api.networking.v1.PacketSender;
+import net.kittykat.mcsatisfactory.components.ModComponents;
+import net.kittykat.mcsatisfactory.components.item.equipment.JetpackDataComponent;
 import net.kittykat.mcsatisfactory.networking.ClientToServerPacket;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.server.MinecraftServer;
@@ -22,9 +24,8 @@ public record JetpackActiveStateC2SPacket(boolean activeState) implements Client
     public void handle(@NotNull MinecraftServer server, ServerPlayerEntity player,
                        ServerPlayNetworkHandler handler, PacketSender responseSender) {
         server.execute(() -> {
-            System.out.println(player.getInventory().armor);
-            //JetpackDataComponent data = ModComponents.JETPACK_DATA.get(player.getInventory().getArmorStack(2));
-            //data.updateActive(activeState);
+            JetpackDataComponent data = ModComponents.JETPACK_DATA.get(player.getInventory().getArmorStack(2));
+            data.updateActive(activeState);
         });
     }
 }
