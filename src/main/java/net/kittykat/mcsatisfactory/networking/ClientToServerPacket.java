@@ -12,7 +12,6 @@ public interface ClientToServerPacket extends Packet<ServerPlayPacketListener> {
     void handle(@NotNull MinecraftServer server, ServerPlayerEntity player,
                 ServerPlayNetworkHandler handler, PacketSender responseSender);
 
-
     @Override
     default void apply(ServerPlayPacketListener listener) {}
 }

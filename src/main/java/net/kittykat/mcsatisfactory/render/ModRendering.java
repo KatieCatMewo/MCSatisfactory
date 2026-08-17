@@ -3,6 +3,7 @@ package net.kittykat.mcsatisfactory.render;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.fabricmc.fabric.api.client.rendering.v1.WorldRenderEvents;
 import net.kittykat.mcsatisfactory.render.hud.SatisfactoryHUD;
+import net.kittykat.mcsatisfactory.render.world.ScannerPulseRenderer;
 import net.minecraft.client.MinecraftClient;
 
 import static net.kittykat.mcsatisfactory.MCSatisfactory.LOGGER;

@@ -1,6 +1,8 @@
-package net.kittykat.mcsatisfactory.networking;
+package net.kittykat.mcsatisfactory.networking.scanner;
 
 import net.fabricmc.fabric.api.networking.v1.PacketSender;
+import net.kittykat.mcsatisfactory.networking.ModNetworking;
+import net.kittykat.mcsatisfactory.networking.ServerToClientPacket;
 import net.kittykat.mcsatisfactory.tools.ResourceScanner;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayNetworkHandler;

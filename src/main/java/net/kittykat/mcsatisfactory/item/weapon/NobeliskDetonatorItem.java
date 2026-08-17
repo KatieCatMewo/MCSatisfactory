@@ -1,4 +1,4 @@
-package net.kittykat.mcsatisfactory.item;
+package net.kittykat.mcsatisfactory.item.weapon;
 
 import net.minecraft.item.ItemStack;
 

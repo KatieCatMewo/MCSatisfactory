@@ -5,6 +5,8 @@ import dev.onyxstudios.cca.api.v3.item.ItemComponent;
 import dev.onyxstudios.cca.api.v3.item.ItemComponentFactoryRegistry;
 import dev.onyxstudios.cca.api.v3.item.ItemComponentInitializer;
 import net.kittykat.mcsatisfactory.components.ModComponents;
+import net.kittykat.mcsatisfactory.components.item.weapon.RebarGunDataComponent;
+import net.kittykat.mcsatisfactory.components.item.weapon.RifleDataComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import org.jetbrains.annotations.NotNull;

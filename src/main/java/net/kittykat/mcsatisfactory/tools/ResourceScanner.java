@@ -2,8 +2,8 @@ package net.kittykat.mcsatisfactory.tools;
 
 import net.kittykat.mcsatisfactory.controls.KeyHandler;
 import net.kittykat.mcsatisfactory.networking.ModNetworking;
-import net.kittykat.mcsatisfactory.networking.ResourceScanC2SPacket;
-import net.kittykat.mcsatisfactory.render.ScannerPulseRenderer;
+import net.kittykat.mcsatisfactory.networking.scanner.ResourceScanC2SPacket;
+import net.kittykat.mcsatisfactory.render.world.ScannerPulseRenderer;
 import net.kittykat.mcsatisfactory.sound.ModSounds;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;

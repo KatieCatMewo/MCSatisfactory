@@ -1,6 +1,10 @@
 package net.kittykat.mcsatisfactory.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.kittykat.mcsatisfactory.item.weapon.NobeliskDetonatorItem;
+import net.kittykat.mcsatisfactory.item.weapon.RebarGunItem;
+import net.kittykat.mcsatisfactory.item.weapon.RifleItem;
+import net.kittykat.mcsatisfactory.item.weapon.XenoZapperItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.Settings;
 import net.minecraft.registry.Registries;

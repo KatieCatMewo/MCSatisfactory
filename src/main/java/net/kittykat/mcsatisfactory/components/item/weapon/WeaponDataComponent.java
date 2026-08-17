@@ -1,6 +1,7 @@
-package net.kittykat.mcsatisfactory.components.item;
+package net.kittykat.mcsatisfactory.components.item.weapon;
 
 import dev.onyxstudios.cca.api.v3.component.ComponentKey;
+import net.kittykat.mcsatisfactory.components.item.BetterItemComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
