@@ -1,6 +1,7 @@
-package net.kittykat.mcsatisfactory.components.item;
+package net.kittykat.mcsatisfactory.components.item.equipment;
 
 import dev.onyxstudios.cca.api.v3.component.ComponentKey;
+import net.kittykat.mcsatisfactory.components.item.BetterItemComponent;
 import net.minecraft.item.ItemStack;
 
 public class JetpackDataComponent extends BetterItemComponent {

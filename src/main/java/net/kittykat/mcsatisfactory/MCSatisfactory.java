@@ -1,6 +1,7 @@
 package net.kittykat.mcsatisfactory;
 
 import net.fabricmc.api.ModInitializer;
+import net.kittykat.mcsatisfactory.advancement.ModCriteria;
 import net.kittykat.mcsatisfactory.block.ModBlocks;
 import net.kittykat.mcsatisfactory.events.ModEvents;
 import net.kittykat.mcsatisfactory.item.ModItemGroups;
@@ -26,5 +27,6 @@ public class MCSatisfactory implements ModInitializer {
         ModSounds.register();
         ModNetworking.register();
         ModParticles.registerParticles();
+        ModCriteria.register();
     }
 }

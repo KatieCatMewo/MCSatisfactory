@@ -3,10 +3,10 @@ package net.kittykat.mcsatisfactory.components;
 import dev.onyxstudios.cca.api.v3.component.Component;
 import dev.onyxstudios.cca.api.v3.component.ComponentKey;
 import dev.onyxstudios.cca.api.v3.component.ComponentRegistry;
-import net.kittykat.mcsatisfactory.components.item.*;
 import net.kittykat.mcsatisfactory.components.entity.*;
-import net.kittykat.mcsatisfactory.components.item.weapon.RebarGunDataComponent;
-import net.kittykat.mcsatisfactory.components.item.weapon.RifleDataComponent;
+import net.kittykat.mcsatisfactory.components.item.equipment.JetpackDataComponent;
+import net.kittykat.mcsatisfactory.components.item.equipment.weapon.RebarGunDataComponent;
+import net.kittykat.mcsatisfactory.components.item.equipment.weapon.RifleDataComponent;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.NotNull;
 

@@ -1,16 +1,16 @@
-package net.kittykat.mcsatisfactory.components.item.weapon;
+package net.kittykat.mcsatisfactory.components.item.equipment.weapon;
 
 import dev.onyxstudios.cca.api.v3.component.ComponentKey;
 import net.kittykat.mcsatisfactory.item.ModItems;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class RifleDataComponent extends WeaponDataComponent {
+public class RebarGunDataComponent extends WeaponDataComponent {
     public static final Item[] AMMO_ITEMS = {
-            ModItems.RIFLE_AMMO, ModItems.RIFLE_AMMO_TURBO, ModItems.RIFLE_AMMO_HOMING
+            ModItems.REBAR, ModItems.REBAR_EXPLOSIVE, ModItems.REBAR_SHATTER, ModItems.REBAR_STUN
     };
 
-    public RifleDataComponent(ItemStack stack, ComponentKey<?> key) {
+    public RebarGunDataComponent(ItemStack stack, ComponentKey<?> key) {
         super(stack, key);
     }
 

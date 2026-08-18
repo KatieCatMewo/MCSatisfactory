@@ -1,4 +1,4 @@
-package net.kittykat.mcsatisfactory.item;
+package net.kittykat.mcsatisfactory.item.equipment;
 
 import net.kittykat.mcsatisfactory.components.entity.PreferredFuelComponent;
 import net.kittykat.mcsatisfactory.sound.ModSounds;
@@ -19,7 +19,7 @@ import net.minecraft.util.Rarity;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.kittykat.mcsatisfactory.components.ModComponents;
-import net.kittykat.mcsatisfactory.components.item.JetpackDataComponent;
+import net.kittykat.mcsatisfactory.components.item.equipment.JetpackDataComponent;
 import net.kittykat.mcsatisfactory.networking.jetpack.JetpackActiveStateC2SPacket;
 import net.kittykat.mcsatisfactory.networking.jetpack.JetpackBoostC2SPacket;
 import net.kittykat.mcsatisfactory.networking.jetpack.JetpackFuelChangeC2SPacket;

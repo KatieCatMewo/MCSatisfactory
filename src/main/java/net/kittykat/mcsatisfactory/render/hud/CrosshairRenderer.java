@@ -2,10 +2,10 @@ package net.kittykat.mcsatisfactory.render.hud;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.kittykat.mcsatisfactory.item.weapon.NobeliskDetonatorItem;
-import net.kittykat.mcsatisfactory.item.weapon.RangedWeaponItem;
-import net.kittykat.mcsatisfactory.item.weapon.RebarGunItem;
-import net.kittykat.mcsatisfactory.item.weapon.RifleItem;
+import net.kittykat.mcsatisfactory.item.equipment.weapon.NobeliskDetonatorItem;
+import net.kittykat.mcsatisfactory.item.equipment.weapon.RangedWeaponItem;
+import net.kittykat.mcsatisfactory.item.equipment.weapon.RebarGunItem;
+import net.kittykat.mcsatisfactory.item.equipment.weapon.RifleItem;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.entity.player.PlayerEntity;

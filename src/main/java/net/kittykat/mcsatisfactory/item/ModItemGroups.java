@@ -16,8 +16,11 @@ import static net.kittykat.mcsatisfactory.MCSatisfactory.LOGGER;
 import static net.kittykat.mcsatisfactory.item.ModItems.*;
 
 public abstract class ModItemGroups {
-    public static final ItemGroup EQUIPMENT = registerItemGroup("equipment", XENO_ZAPPER,
+    public static final ItemGroup EQUIPMENT = registerItemGroup("equipment", COFFEE_CUP,
             ((displayContext, entries) -> {
+                entries.add(COFFEE_CUP);
+                entries.add(GOLDEN_COFFEE_CUP);
+
                 entries.add(XENO_ZAPPER);
                 entries.add(NOBELISK_DETONATOR);
                 entries.add(REBAR_GUN);

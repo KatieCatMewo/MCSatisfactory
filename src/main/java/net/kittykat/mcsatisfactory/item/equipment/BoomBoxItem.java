@@ -1,4 +1,4 @@
-package net.kittykat.mcsatisfactory.item;
+package net.kittykat.mcsatisfactory.item.equipment;
 
 import net.minecraft.item.Item;
 import net.minecraft.util.Rarity;

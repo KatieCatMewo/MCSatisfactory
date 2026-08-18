@@ -53,6 +53,9 @@ public class ModLangProvider extends FabricLanguageProvider {
         addItemGroup("equipment", "Satisfactory Equipment");
         addItemGroup("parts",     "Satisfactory Parts");
 
+        addItem(COFFEE_CUP,        "Cup");
+        addItem(GOLDEN_COFFEE_CUP, "'Employee of the Planet' Cup");
+
         addItem(XENO_ZAPPER,        "Xeno-Zapper");
         addItem(NOBELISK_DETONATOR, "Nobelisk Detonator");
         addItem(REBAR_GUN,          "Rebar Gun");
@@ -74,6 +77,11 @@ public class ModLangProvider extends FabricLanguageProvider {
         addItem(PACKAGED_TURBOFUEL,    "Packaged Turbofuel");
         addItem(PACKAGED_ROCKET_FUEL,  "Packaged Rocket Fuel");
         addItem(PACKAGED_IONIZED_FUEL, "Packaged Ionized Fuel");
+
+        addAdvancement("root", "Satisfactory", "An open-world factory building game.");
+        addAdvancement("drink_coffee", "Are you sure that's coffee?", "Drink coffee.");
+        addAdvancement("peak_height", "Peak gameplay", "Reach the highest cliff in the world.");
+        addAdvancement("max_height", "What a thrill", "Reach the maximum world height.");
     }
 
     private void addItem(@NotNull Item item, String translation) {
@@ -100,6 +108,11 @@ public class ModLangProvider extends FabricLanguageProvider {
 
     private void addDialogue(String dialogue, String translation) {
         addLang("dialogue", dialogue, translation);
+    }
+
+    private void addAdvancement(String advancement, String title, String desc) {
+        addLang("advancement", "%s.title".formatted(advancement), title);
+        addLang("advancement", "%s.description".formatted(advancement), desc);
     }
 
     private void addLang(String key, String translation) {

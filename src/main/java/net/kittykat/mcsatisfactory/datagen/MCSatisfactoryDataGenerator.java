@@ -10,8 +10,9 @@ public class MCSatisfactoryDataGenerator implements DataGeneratorEntrypoint {
     public void onInitializeDataGenerator(@NotNull FabricDataGenerator fabricDataGenerator) {
         Pack pack = fabricDataGenerator.createPack();
 
+        pack.addProvider(ModAdvancementProvider::new);
+        pack.addProvider(ModLangProvider::new);
         pack.addProvider(ModModelProvider::new);
         pack.addProvider(ModSoundProvider::new);
-        pack.addProvider(ModLangProvider::new);
     }
 }

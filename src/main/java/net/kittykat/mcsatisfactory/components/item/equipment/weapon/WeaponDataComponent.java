@@ -1,4 +1,4 @@
-package net.kittykat.mcsatisfactory.components.item.weapon;
+package net.kittykat.mcsatisfactory.components.item.equipment.weapon;
 
 import dev.onyxstudios.cca.api.v3.component.ComponentKey;
 import net.kittykat.mcsatisfactory.components.item.BetterItemComponent;
